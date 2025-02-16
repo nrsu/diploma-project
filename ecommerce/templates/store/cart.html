@@ -1,0 +1,9 @@
+<head>    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<h1>Your Cart</h1>
+{% for item in cart_items %}
+    <p>{{ item.product.name }} - {{ item.quantity }} x ${{ item.product.price }}</p>
+{% endfor %}
